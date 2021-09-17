@@ -58,6 +58,7 @@ function LandingPage() {
                 {Movies && Movies.map((movie, index)=>(
                 <React.Fragment key={index}>
                     <GridCards 
+                        landingPage
                         image={movie.poster_path ?  //movieposter이 없으면 그대로 api를 받아오고 없으면 null값으로 받아옴
                              `${IMAGE_BASE_URL}w500${movie.poster_path}`  : null}
                         movieId={movie.id}
@@ -66,9 +67,6 @@ function LandingPage() {
                     />
                 </React.Fragment>
                 ))}
-
-
-
                 </Row>
                 
             </div>
