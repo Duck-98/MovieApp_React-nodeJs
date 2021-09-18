@@ -15,14 +15,17 @@ function Favorite(props) {
             movieId
         }
 
-        Axios.post(`/api/favorite/favoriteNumber`, variables)
+        Axios.post('/api/favorite/favoriteNumber', variables)
         .then(response => {
+            console.log(response.data)
             if(response.data.success){
-
+                
             }else{
                 alert('숫자 정보를 가져오는데 실패하였습니다.')
             }
         })
+
+        
     }, [])
     
     return (
